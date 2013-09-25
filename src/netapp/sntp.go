@@ -1,3 +1,7 @@
+//package netapp
+//author: Lubia Yang
+//create: 2013-9-24
+
 package netapp
 
 import (
@@ -22,6 +26,8 @@ func GetHandler()*Handler{
 	return handler
 }
 
+// DatagramReceived
+// every udp request trigger it.
 func (p *Handler) DatagramReceived(data []byte, addr net.Addr) {
 	res,err := sntp.Serve(data)
 	if err == nil{

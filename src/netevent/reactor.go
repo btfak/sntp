@@ -1,3 +1,7 @@
+//package netevent
+//author: Lubia Yang
+//create: 2013-7-20
+
 package netevent
 
 import (

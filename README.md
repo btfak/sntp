@@ -1,12 +1,12 @@
 sntp
 ====
 
-### A implementation of NTP server with Golang,reference RFC2030
+### A implementation of NTP server with Golang, RFC2030
 
-NTP协议Golang实现
-从本机获取时间，同步到其他设备。
-适用于不能连接公网的局域网内设备的时间同步。
-严格遵循RFC2030协议，兼容linux下ntpdate服务。
+- NTP协议Golang实现
+- 从本机获取时间，同步到其他设备。
+- 适用于不能连接公网的局域网内设备的时间同步。
+- 严格遵循RFC2030协议，兼容linux下ntpdate服务。
 
 #### 更多请参考 [我的博客](www.lubia.me)
 #### 授权许可

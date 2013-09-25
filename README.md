@@ -7,7 +7,7 @@ sntp
 - Multiple equipments sync time from local
 - Design for multiple equipments which can't connect to internet and need synchronization time
 - Compatible with [ntpdate](http://www.eecis.udel.edu/~mills/ntp/html/ntpdate.html) service on the linux
-
+- The ntp client is fork from [beevik](https://github.com/beevik/ntp/)
 ##### More? 
 [My Blog](http://www.lubia.me)
 

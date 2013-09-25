@@ -1,6 +1,0 @@
-package sntp
-
-import (
-
-)
-

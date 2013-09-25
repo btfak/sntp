@@ -1,8 +1,7 @@
 sntp
 ====
 
-### A implementation of NTP server with Golang
-####reference RFC2030
+### A implementation of NTP server with Golang,reference RFC2030
 
 NTP协议Golang实现
 从本机获取时间，同步到其他设备。

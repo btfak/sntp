@@ -6,7 +6,7 @@ sntp
 - Base on [RFC 2030](http://tools.ietf.org/html/rfc2030)
 - Multiple equipments sync time from local
 - Design for multiple equipments which can't connect to internet and need synchronization time
-- Compatible with ntpdate service on the linux
+- Compatible with [ntpdate](http://www.eecis.udel.edu/~mills/ntp/html/ntpdate.html) service on the linux
 
 ##### More? 
 [My Blog](http://www.lubia.me)

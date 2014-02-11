@@ -1,4 +1,4 @@
-sntp
+sntp      [![Build Status](https://drone.io/github.com/lubia/sntp/status.png)](https://drone.io/github.com/lubia/sntp/latest)
 ====
 
 ### A implementation of NTP server with Golang

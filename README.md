@@ -9,6 +9,15 @@ sntp
 - Compatible with [ntpdate](http://www.eecis.udel.edu/~mills/ntp/html/ntpdate.html) service on the linux
 - NTP client is fork from [beevik](https://github.com/beevik/ntp/)，a better client
 
+####Usage manual
+#####1. install Golang
+
+Please reference  [Go install](https://github.com/astaxie/build-web-application-with-golang/blob/master/ebook/01.1.md) chapter of open-source Golang book "build-web-application-with-golang".
+
+#####2. install Sntp
+
+    $ go get github.com/lubia/sntp
+
 ##### More? 
 [My Blog](http://www.lubia.me)
 

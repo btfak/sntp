@@ -6,11 +6,11 @@
 package main
 
 import (
-	"netevent" 
-	"netapp"
+	"github.com/lubia/sntp/netapp"
+	"github.com/lubia/sntp/netevent"
 )
- 
-func main(){
+
+func main() {
 	var handler = netapp.GetHandler()
 	netevent.Reactor.ListenUdp(123, handler)
 	netevent.Reactor.Run()

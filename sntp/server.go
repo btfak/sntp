@@ -1,5 +1,5 @@
 //package sntp
-//author: Lubia Yang
+//author: btfak.com
 //create: 2013-9-25
 
 package sntp
@@ -76,7 +76,7 @@ func int2bytes(i int64) []byte {
 }
 
 // generate
-/*    
+/*
 	  Field Name              Request    Reply
       ----------------------------------------------------------
       LI                      0 or 3     0

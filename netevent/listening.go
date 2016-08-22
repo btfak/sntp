@@ -1,5 +1,5 @@
 //package netevent
-//author: Lubia Yang
+//author: btfak.com
 //create: 2013-7-20
 
 package netevent
@@ -45,8 +45,8 @@ func (p *_reactor) ListenUnix(addr string, unix UnixHandler) {
 func (p *_reactor) ListenUdp(port int, udp UdpClient) {
 	laddr, err := net.ResolveUDPAddr("udp", ":"+strconv.Itoa(port))
 	if err == nil {
-		p.listenUdp(laddr,udp)
-	}else{
+		p.listenUdp(laddr, udp)
+	} else {
 		fmt.Println("resolve addr err")
 		return
 	}
@@ -74,7 +74,7 @@ func (p *_reactor) ListenTcp(port int, tcp TcpClient) {
 
 //function for inner-file usage
 //helper function for the udp listening of ipv4 and ipv6
-func(p *_reactor)listenUdp(addr *net.UDPAddr,udp UdpClient) {
+func (p *_reactor) listenUdp(addr *net.UDPAddr, udp UdpClient) {
 	p.initReactor()
 	p.udp_listeners[addr.Port] = udp
 	fmt.Println("listening on " + strconv.Itoa(addr.Port))
@@ -90,7 +90,7 @@ func(p *_reactor)listenUdp(addr *net.UDPAddr,udp UdpClient) {
 }
 
 //init the reactor
-func (p *_reactor)initReactor() {
+func (p *_reactor) initReactor() {
 	if p.udp_listeners == nil {
 		p.udp_listeners = make(map[int]UdpClient)
 	}

@@ -1,18 +1,17 @@
 //package netevent
-//author: Lubia Yang
+//about: btfak.com
 //create: 2013-7-20
 
 package netevent
 
-import (
-)
+import ()
 
 type UdpHandler struct {
-	udptransport	Transport
+	udptransport Transport
 }
 
 type TcpHandler struct {
-	tcptransport	Transport
+	tcptransport Transport
 }
 
 func (p *UdpHandler) SetUdpTransport(transport Transport) {
@@ -23,10 +22,10 @@ func (p *TcpHandler) SetTcpTransport(transport Transport) {
 	p.tcptransport = transport
 }
 
-func (p *UdpHandler) UdpWrite(data string, addr string, port int){
-	p.udptransport.Write(data,addr,port)
+func (p *UdpHandler) UdpWrite(data string, addr string, port int) {
+	p.udptransport.Write(data, addr, port)
 }
 
-func (p *TcpHandler) TcpWrite(data string, addr string, port int){
+func (p *TcpHandler) TcpWrite(data string, addr string, port int) {
 	//p.transport.Write(data,addr,port)
 }

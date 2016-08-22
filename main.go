@@ -1,13 +1,13 @@
 //package main
-//author: Lubia Yang
+//about: btfak.com
 //create: 2013-9-25
-//about: www.lubia.me
+//update: 2016-08-22
 
 package main
 
 import (
-	"github.com/lubia/sntp/netapp"
-	"github.com/lubia/sntp/netevent"
+	"github.com/btfak/sntp/netapp"
+	"github.com/btfak/sntp/netevent"
 )
 
 func main() {

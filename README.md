@@ -1,4 +1,4 @@
-sntp      [![Build Status](https://drone.io/github.com/lubia/sntp/status.png)](https://drone.io/github.com/lubia/sntp/latest)
+sntp      [![Build Status](https://drone.io/github.com/btfak/sntp/status.png)](https://drone.io/github.com/btfak/sntp/latest)
 ====
 
 ### A implementation of NTP server with Golang
@@ -16,10 +16,10 @@ Please reference  [Go install](https://github.com/astaxie/build-web-application-
 
 #####2. install Sntp
 
-    $ go get github.com/lubia/sntp
+    $ go get github.com/btfak/sntp
 
 ##### More? 
-[My Blog](http://www.lubia.me)
+[My Blog](http://www.btfak.com)
 
 ##### License
 [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).

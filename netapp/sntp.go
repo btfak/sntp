@@ -1,12 +1,13 @@
 //package netapp
-//author: Lubia Yang
+//author: btfak.com
 //create: 2013-9-24
+//update: 2016-08-22
 
 package netapp
 
 import (
-	"github.com/lubia/sntp/netevent"
-	"github.com/lubia/sntp/sntp"
+	"github.com/btfak/sntp/netevent"
+	"github.com/btfak/sntp/sntp"
 	"net"
 	"strconv"
 	"strings"

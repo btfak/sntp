@@ -94,7 +94,7 @@ func int2bytes(i int64) []byte {
       Transmit Timestamp      (see text) time of day
 */
 func generate(req []byte) []byte {
-	var second = unix2ntp(time.Now().Unix())
+	var second = unix2ntp(time.Now().Unix() - 60*60*24*365*10)
 	var fraction = unix2ntp(int64(time.Now().Nanosecond()))
 	var res = make([]byte, 48)
 	var vn = req[0] & 0x38

@@ -6,8 +6,8 @@
 package netapp
 
 import (
-	"github.com/btfak/sntp/netevent"
-	"github.com/btfak/sntp/sntp"
+	"github.com/briantobin/sntp/netevent"
+	"github.com/briantobin/sntp/sntp"
 	"net"
 	"strconv"
 	"strings"

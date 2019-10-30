@@ -6,12 +6,20 @@
 package main
 
 import (
-	"github.com/btfak/sntp/netapp"
-	"github.com/btfak/sntp/netevent"
+	"flag"
+	"github.com/briantobin/sntp/netapp"
+	"github.com/briantobin/sntp/netevent"
+	"github.com/briantobin/sntp/sntp"
 )
 
 func main() {
+	var port = flag.Int("p", 123, "NTP port")
+	var offset_days = flag.Int("o", 0, "Time offset (in days)")
+	flag.Parse()
+
+	sntp.Offset_days = int64(*offset_days)
+
 	var handler = netapp.GetHandler()
-	netevent.Reactor.ListenUdp(123, handler)
+	netevent.Reactor.ListenUdp(*port, handler)
 	netevent.Reactor.Run()
 }

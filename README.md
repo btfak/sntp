@@ -16,7 +16,7 @@ Please reference  [Go install](https://github.com/astaxie/build-web-application-
 
 ##### 2. install Sntp
 
-    $ go get github.com/btfak/sntp
+    $ go get github.com/briantobin/sntp
 
 ##### More? 
 [My Blog](http://www.btfak.com)

@@ -6,8 +6,8 @@
 package netapp
 
 import (
-	"github.com/btfak/sntp/netevent"
-	"github.com/btfak/sntp/sntp"
+	"github.com/briantobin/sntp/netevent"
+	"github.com/briantobin/sntp/sntp"
 	"net"
 	"strconv"
 	"strings"
@@ -37,8 +37,10 @@ func (p *Handler) DatagramReceived(data []byte, addr net.Addr) {
 }
 
 func spliteAddr(addr string) (string, int) {
-	ip := strings.Split(addr, ":")[0]
-	port := strings.Split(addr, ":")[1]
+	delimiterIdx := strings.LastIndex(addr, ":")
+	ip := addr[0:delimiterIdx]
+	port := addr[delimiterIdx+1:]
+
 	p, _ := strconv.Atoi(port)
 	return ip, p
 }

@@ -6,12 +6,16 @@
 package main
 
 import (
+	"flag"
 	"github.com/briantobin/sntp/netapp"
 	"github.com/briantobin/sntp/netevent"
 )
 
 func main() {
+	var port = flag.Int("p", 123, "NTP port")
+	flag.Parse()
+
 	var handler = netapp.GetHandler()
-	netevent.Reactor.ListenUdp(6123, handler)
+	netevent.Reactor.ListenUdp(*port, handler)
 	netevent.Reactor.Run()
 }

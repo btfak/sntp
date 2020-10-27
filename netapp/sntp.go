@@ -1,16 +1,15 @@
-//package netapp
-//author: btfak.com
-//create: 2013-9-24
-//update: 2016-08-22
+// package netapp
+// Modifications copyright (C) 2020 Fabio A. Takeuchi
 
 package netapp
 
 import (
-	"github.com/btfak/sntp/netevent"
-	"github.com/btfak/sntp/sntp"
 	"net"
 	"strconv"
 	"strings"
+
+	"github.com/fakiot/sntp/netevent"
+	"github.com/fakiot/sntp/sntp"
 )
 
 var handler *Handler

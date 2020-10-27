@@ -1,6 +1,5 @@
-//package sntp
-//author: btfak.com
-//create: 2013-9-25
+// package sntp
+// Modifications copyright (C) 2020 Fabio A. Takeuchi
 
 package sntp
 
@@ -17,6 +16,19 @@ const (
 	MODE_CLIENT        = 3
 	FROM_1900_TO_1970  = 2208988800
 )
+
+type syncInterf interface {
+	Sync() time.Time
+}
+
+var tSync syncInterf
+
+// SetSyncFunc set custom interface with function to return current time.
+// If not set this method, get current system timestamp.
+// This function can be used to get external timestamp from another system for example
+func SetSyncFunc(v syncInterf) {
+	tSync = v
+}
 
 // Serve
 // check the request format.
@@ -94,8 +106,12 @@ func int2bytes(i int64) []byte {
       Transmit Timestamp      (see text) time of day
 */
 func generate(req []byte) []byte {
-	var second = unix2ntp(time.Now().Unix())
-	var fraction = unix2ntp(int64(time.Now().Nanosecond()))
+	t := time.Now()
+	if tSync != nil {
+		t = tSync.Sync()
+	}
+	var second = unix2ntp(t.Unix())
+	var fraction = unix2ntp(int64(t.Nanosecond()))
 	var res = make([]byte, 48)
 	var vn = req[0] & 0x38
 	res[0] = vn + 4

@@ -36,7 +36,7 @@ func (p *_reactor) CallLater(millisecond int, lc func()) {
 }
 
 func (p *_reactor) Run() {
-	runtime.GOMAXPROCS(len(p.udp_conn) + len(p.unix_conn))
+	// runtime.GOMAXPROCS(len(p.udp_conn) + len(p.unix_conn))
 	for port, l := range p.udp_conn {
 		go handleUdpConnection(l, p.udp_listeners[port])
 	}
